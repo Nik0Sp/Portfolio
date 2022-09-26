@@ -881,9 +881,7 @@ opacity: 0.5;
   }
 
 
-.about .content .imgBox img{
-  display: none;
-}
+
 
 .about .content .textBox{
   display: grid;
