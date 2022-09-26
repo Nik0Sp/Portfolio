@@ -433,7 +433,7 @@ section {
 }
 
 .projectContainer span{
-  background: linear-gradient(0deg, rgb(146, 134, 255) 50%, rgb(255, 251, 6) 50%);
+  background: linear-gradient(0deg, rgb(146, 134, 255) 50%, yellow 50%);
   position: absolute;
   height: 300%;
   width: 40%;
