@@ -149,8 +149,8 @@ section {
     2px 2px #e4e4e4,
     3px 3px #e4e4e4,
     4px 4px #6c48c3;
-    color: transparent;
-}
+    color: #fff;
+  }
 
 .banner .content .textBx {
   display: inline-flex;
