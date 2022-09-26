@@ -904,6 +904,27 @@ opacity: 0.5;
 
 }
 
+.ourServices .content .servicesLight 
+{
+ 
+  height: 350px;
+  
+}
+
+.ourServices .content .servicesLight:hover
+{
+  height: 500px;
+  
+}
+.ourServices .content .servicesLight .servicesBox
+{
+  height: 350px;
+}
+
+.ourServices .content .servicesLight .card
+{
+margin-top: 10px;
+}
 
 
 .contact .contactForm .zeile2 input[type="submit"] {
@@ -1129,7 +1150,10 @@ font-size: 2rem;
   grid-template-columns: repeat(1, 1fr);
 
 }
-
+.ourServices .content .servicesLight .servicesBox span img {
+  height: 150px;
+  width: 130px;
+}
 .contact .contactForm  .zeile{
   grid-template-columns: repeat(1, 1fr);
 
@@ -1139,6 +1163,7 @@ font-size: 2rem;
   border: 1px solid #f5eb2d;
   margin-bottom: 20px;
 }
+
 
 footer p{
   font-size: 1.2rem;
