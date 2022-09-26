@@ -236,8 +236,7 @@ section {
 
 .banner img {
   position: absolute;
-  right: -20%;
-  border: 10px solid black;
+  right: -10%;
   height:100vh;
   z-index: 1;
   animation: lampe 6s infinite;
@@ -1092,6 +1091,9 @@ font-size: 1.6rem;
  height: 40vh;
  right: -10%;
  top: 20%;
+ animation: none;
+ opacity: 0.5;
+ border: none;
 }
 
 .banner .content .btn {
