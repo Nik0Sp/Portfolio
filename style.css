@@ -190,7 +190,7 @@ section {
 
 @keyframes ani {
   100% {
-    top: -100px;
+    top: -95px;
   }
 }
 
@@ -483,7 +483,8 @@ section {
 }
 
 
-.projectContainer .textBox{
+.projectContainer .textBox
+{
   position: absolute;
   top: 1%;
   left: 1%;
@@ -494,13 +495,18 @@ section {
   display: flex;  
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  text-align: center;
   font-size: 3rem;
   color: #ccc8c8;
-  text-shadow: 1px 1px #d7d7d7,
-  2px 2px #999;
+ 
   letter-spacing: 2px;
   border-radius: 5px;
 
+}
+
+.projectContainer .textBox h6{
+  font-size: 1.4rem;
 }
 
 .projectContainer .textBox p span{
