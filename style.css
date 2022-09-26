@@ -1077,6 +1077,9 @@ font-size: 1.6rem;
 .title h2{
  font-size: 2rem;
 }
+.about{
+  padding: 100px 3%;
+}
 
 .about .content{
   flex-direction: column;
@@ -1093,7 +1096,7 @@ font-size: 1.6rem;
 .about .content .imgBox img 
 {
   height: 30vh;
-  width: 50vw;
+  width: 75vw;
 }
 
 .about .content .textBox {
@@ -1109,6 +1112,7 @@ font-size: 2rem;
 .about .content .textBox .textContainer p
 {
   font-size: 1.2rem;
+  width: 100%;
 }
 
 .project .content {
