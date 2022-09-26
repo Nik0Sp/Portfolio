@@ -909,7 +909,9 @@ opacity: 0.5;
   border: 1px solid #f5eb2d;
   margin-bottom: 20px;
 }
-
+.ourServices .content .servicesLight .servicesBox h5{
+  font-size: 2.5em;
+}
 
 }
 
@@ -1116,6 +1118,9 @@ font-size: 2rem;
   grid-template-columns: repeat(1, 1fr);
 }
 
+.ourServices .content .servicesLight .servicesBox h5{
+  font-size: 1.8em;
+}
 .ourServices .content{
   grid-template-columns: repeat(1, 1fr);
 
