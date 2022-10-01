@@ -507,8 +507,11 @@ section {
 
 }
 
-.projectContainer .textBox h6{
-  font-size: 1.4rem;
+.projectContainer .textBox iframe{
+  position: relative;
+  z-index: 9;
+  width: 99%;
+  height: 99%;
 }
 
 .projectContainer .textBox p span{
@@ -608,18 +611,6 @@ transition: 2s;
   color: #fff;
 }
 
-.ourServices .content .servicesLight .servicesBox h5::before {
-  position: absolute;
-  left: 50%;
-  content: "";
-  height: 4px;
-  width: 70px;
-  background-color: #f5eb2d;
-  transform: translateX(-50%);
-  bottom: -6px;
-  border-radius: 2px;
-
-}
 
 .ourServices .content .servicesLight .servicesBox p {
   color: #6c48c3;
