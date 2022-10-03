@@ -14,7 +14,7 @@
 
 body {
   overflow-x: hidden;
-
+  background-color: #000;
 }
 
 
@@ -22,50 +22,127 @@ body {
 
 /* navbar bereich ab hier */
 
-.navbar input[type="checkbox"],
-.navbar .hamburger-lines {
-  display: none;
-}
-
-.navbar {
-  position: fixed;
-  width: 100%;
-  color: #ececec;
-  opacity: 0.9;
-  height: 150px;
-  z-index: 10;
-  padding: 0 20px;
-}
-
-.navbar-container {
+.nav-container{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 5%;
+  z-index: 100;
+  
 }
 
-.menu-items {
-  order: 2;
-  display: flex;
+
+.nav-container .logo{
+  position: fixed;
+  left: 70px;
+  top: 40px;
 }
 
-.menu-items li {
-  list-style: none;
-  margin-left: 1.5rem;
-  margin-bottom: 0.5rem;
-
-}
-
-.menu-items a {
+.nav-container .logo a{
+  font-size: 5rem;
+  font-weight: 900;
   text-decoration: none;
-  color: #e4e4e4;
-  font-weight: 500;
-  transition: color 0.3s ease-in-out;
-  text-shadow: 1px 1px black;
-  font-size:2rem;
+  color: rgb(255, 255, 255); text-shadow: 1px 1px #ffffff,2px 2px #ffffff;
+  letter-spacing: 3px;
 }
 
-.menu-items a:hover {
+.nav-container .logo a span{
+  color:#f5eb2d;
+  text-shadow: 1px 1px #f5eb2d,2px 2px #f5eb2d;
+}
+
+.nav-container .navbar ul{
+  position: fixed;
+  right: 70px;
+  top: 65px;
+  display: flex;
+  list-style: none;
+
+}
+
+.nav-container .navbar ul li 
+{
+  
+  margin-left: 20px;
+}
+
+
+.nav-container .navbar ul li a{
+  text-decoration: none;
+  font-size: 2rem;
+  color: #ffffff;
+  text-shadow: 1px 1px #000;
+
+
+}
+
+.nav-container .navbar ul li:last-child:active .nav-container .seitliche-navbar {
+display: contents;
+width: 300px;
+}
+
+.nav-container .navbar input[type="checkbox"]
+{
+  height: 30px;
+  width: 30px;
+  position: fixed ;
+  left: 40px;
+  top: 50px;
+  display: none;
+  z-index: 103;
+  transition: 1s;
+  cursor: pointer;
+  opacity: 0;
+}
+
+
+
+.nav-container .navbar .menu-hamburger div
+{
+  height: 5px;
+  width: 25px;
+  background-color: #ffffff;
+  position: fixed;
+  left: 40px;
+  top: 55px;
+  border-radius: 10px;
+  z-index: 102;
+  display: none;
+}
+
+.nav-container .navbar .menu-hamburger div::after
+{
+  position: absolute;
+  content: "";
+  height: 5px;
+  width: 25px;
+  background-color: #ffffff;
+  top: 10px;
+  border-radius: 10px;
+  transition: 0.5s;
+
+}
+.nav-container .navbar .menu-hamburger div::before
+{
+  position: absolute;
+  content: "";
+  height: 5px;
+  width: 25px;
+  background-color: #ffffff;
+  top: 20px;
+  border-radius: 10px;
+
+
+}
+
+
+
+.menu a:hover {
   color: #f5eb2d;
   transition: color 0.3s ease-in-out;
   padding-bottom: 5px;
@@ -866,6 +943,20 @@ opacity: 0.5;
 
 @media (max-width:1023px) {
 
+  .nav-container .logo
+{
+    position: fixed;
+    left: 70px;
+    top: 40px;
+   
+}
+
+.nav-container .navbar  ul{
+  position: fixed;
+  top: 65px;
+  right: 70px;
+}
+
   .banner img {
     bottom: 15vh;
     right: -25%;
@@ -941,109 +1032,83 @@ margin-top: 10px;
 
 
 @media (max-width: 767px) {
-  .navbar {
-    opacity: 0.95;
-  }
-
-  .navbar-container input[type="checkbox"],
-  .navbar-container .hamburger-lines {
-    display: block;
-  }
-
-  .navbar-container {
-    display: block;
+  .nav-container{
     position: relative;
-    height: 64px;
-  }
-
-  .navbar-container input[type="checkbox"] {
-    position: absolute;
-    display: block;
-    height: 32px;
-    width: 30px;
-    top: 20px;
-    left: 20px;
-    z-index: 5;
-    opacity: 0;
-  }
-
-  .navbar-container .hamburger-lines {
-    display: block;
-    height: 23px;
-    width: 35px;
-    position: absolute;
-    top: 17px;
-    left: 20px;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .navbar-container .hamburger-lines .line {
-    display: block;
-    height: 4px;
+    top: 0;
+    left: 0;
     width: 100%;
-    border-radius: 10px;
-    background: #fff;
-  }
+}
 
-  .navbar-container .hamburger-lines .line1 {
-    transform-origin: 0% 0%;
-    transition: transform 0.4s ease-in-out;
-  }
+.nav-container .logo a
+{
+    position: fixed;
+    right: 40px;
+    top: 47px;
+    font-size: 3.7rem;
+   
+}
+.nav-container .navbar .menu-hamburger div{
+  display: initial;
 
-  .navbar-container .hamburger-lines .line2 {
-    transition: transform 0.2s ease-in-out;
-  }
+}
 
-  .navbar-container .hamburger-lines .line3 {
-    transform-origin: 0% 100%;
-    transition: transform 0.4s ease-in-out;
-  }
-
-  .navbar .menu-items {
-    padding-top: 100px;
-    background: rgb(80, 80, 80);
-    height: 100vh;
-    max-width: 300px;
-    transform: translate(-150%);
+.nav-container .navbar  ul
+{
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
-    margin-left: -40px;
-    padding-left: 50px;
-    transition: transform 0.5s ease-in-out;
-    box-shadow: 5px 0px 10px 0px rgba(255, 247, 0, 0.736);
-  }
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 0px;
+    background: #0000007a;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
 
-  .navbar .menu-items li {
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
-    font-weight: 500;
-  }
+.nav-container .navbar  ul li{
+  padding: 20px;
+}
 
-  .logo {
-    position: absolute;
-    top: 5px;
-    right: 15px;
-    font-size: 3rem;
-  }
 
-  .navbar-container input[type="checkbox"]:checked~.menu-items {
-    transform: translateX(0);
-  }
+.nav-container .navbar input[type="checkbox"]:checked~.menu-hamburger div::before
+{
+    opacity: 0;
+    transition: 0.5s;
+}
 
-  .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line1 {
-    transform: rotate(35deg);
-  }
 
-  .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line2 {
-    transform: scaleY(0);
-  }
+.nav-container .navbar input[type="checkbox"]:checked~.menu-hamburger div::after
+{
+   transform: translateY(-10px) rotate(90deg);
+   transition: 0.5s;
+}
 
-  .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line3 {
-    transform: rotate(-35deg);
-  }
+.nav-container .navbar input[type="checkbox"]:checked~.menu-hamburger div
+{ 
+    transform: translateY(10px) rotate(-45deg);
+   transition: 0.5s;
+
+}
+
+
+.nav-container .navbar input[type="checkbox"]{
+display: initial;    
+}
+
+.nav-container .navbar input[type="checkbox"]:checked{
+transition: 1s;
+}
+
+.nav-container .navbar input[type="checkbox"]:checked~.menu
+{
+width: 300px;
+
+}
 
 
   
